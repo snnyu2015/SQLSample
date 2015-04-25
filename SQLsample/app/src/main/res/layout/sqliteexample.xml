@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ffbedddd">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Fruits"
+        android:id="@+id/lblFruits"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Name:"
+        android:id="@+id/lblName"
+        android:layout_below="@+id/lblFruits"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Color:"
+        android:id="@+id/lblColor"
+        android:layout_below="@+id/ETname"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Vitamins:"
+        android:id="@+id/lblVitamins"
+        android:layout_below="@+id/ETcolor"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Location:"
+        android:id="@+id/lblLocation"
+        android:layout_below="@+id/ETvitamins"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ETcolor"
+        android:layout_below="@+id/lblColor"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/ETvitamins"
+        android:background="#ffffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ETvitamins"
+        android:layout_below="@+id/lblVitamins"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/ETlocation"
+        android:background="#ffffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ETlocation"
+        android:layout_below="@+id/lblLocation"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/btnViewDB"
+        android:background="#ffffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ETname"
+        android:layout_below="@+id/lblName"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/btnViewDB"
+        android:background="#ffffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update SQLite DB"
+        android:id="@+id/btnUpdateSQL"
+        android:layout_below="@+id/ETlocation"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View"
+        android:id="@+id/btnViewDB"
+        android:layout_alignTop="@+id/btnUpdateSQL"
+        android:layout_toEndOf="@+id/btnUpdateSQL" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ETname">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/sqlview"
+            android:layout_gravity="left|top" />
+    </FrameLayout>
+
+</RelativeLayout>
